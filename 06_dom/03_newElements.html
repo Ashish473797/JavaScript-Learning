@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #ffffffde;
+        }
+    </style>
+</head>
+<body class="bg-black"></body>
+
+<script>
+
+    const div = document.createElement("div")
+    div.className = "first-class"
+    div.id = "first-id"
+    div.innerText = "New Element in DOM."
+    div.style.backgroundColor = "red";
+    div.style.padding = "10px"
+    div.style.fontSize = "2rem"
+    console.log(div)
+
+    document.body.appendChild(div)
+    // To Add in Document as a Child.
+
+</script>
+
+</html>

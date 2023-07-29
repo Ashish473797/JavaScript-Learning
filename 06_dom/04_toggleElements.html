@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #ffffffde;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <h1>Adding and Removing Elements.</h1>
+    <ul class="list-lang">
+        <li class="item">Javascript</li>
+    </ul>
+</body>
+
+<script>
+
+    // Adding Element:
+
+    function addListLang(langName){
+        let li = document.createElement("li")
+        li.className = "item"
+        li.innerHTML = `${langName}`
+        console.log(li)
+        document.querySelector(".list-lang").appendChild(li)
+    }
+    addListLang("C++")
+    addListLang("Java")
+    
+    function addListLanguage(langName){
+        let li = document.createElement("li")
+        li.className = "item"
+        li.appendChild(document.createTextNode(langName))
+        console.log(li)
+        document.querySelector(".list-lang").appendChild(li)
+    }
+    // This is Optimise funtion for adding list item.
+    addListLanguage("Golang")
+    addListLanguage("Python")
+
+
+    // Editing Element:
+
+    let secondLang = document.querySelectorAll("li.item")
+    let li = document.createElement("li")
+    li.appendChild(document.createTextNode("Typescript"))
+    secondLang[1].replaceWith(li)
+
+
+    // Removing Element:
+
+    let lastLang = document.querySelector("ul.list-lang").lastElementChild
+    lastLang.remove()
+
+</script>
+
+</html>

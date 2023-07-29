@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #ffffffde;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div class="weeks">
+        <div class="day">Sunday</div>
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+    </div>
+</body>
+
+<script>
+
+    const parent = document.querySelector(".weeks")
+    console.log(parent)
+    console.log(parent.children)
+    console.log(parent.children[0].innerHTML)
+
+    // Selection child using parent:
+    console.log(parent.lastElementChild.innerHTML)
+
+    // Selection parent using child:
+    console.log(document.querySelector(".day").parentElement)
+
+    // Selection of siblings:
+    console.log(document.querySelector(".day").nextElementSibling)
+
+</script>
+
+</html>

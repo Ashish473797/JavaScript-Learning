@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #ffffffde;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="header">DOM LEARNING</h1>
+        <h2 id="one" class="header-two" style="background-color: green;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, deleniti.</h2>
+        <h2 id="two" class="header-two" style="background-color: blue;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, deleniti.</h2>
+        <h2 id="three" class="header-two" style="background-color: violet;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, deleniti.</h2>
+        <p id="para">Lorem ipsum dolor sit amet <span style="background-color: red; display: none;">Hello World</span> consectetur adipisicing elit.</p>
+        <input type="password" name="pass-input">
+
+        <ul class="unordered-list">
+            <li class="item">one</li>
+            <li class="item">two</li>
+            <li class="item">three</li>
+        </ul>
+
+    </div>
+
+</body>
+
+<script>
+
+    // Id Selector:
+
+    console.log(document.getElementById("title").id)
+    console.log(document.getElementById("title").className)
+    console.log(document.getElementById("title").getAttribute("id"))
+    console.log(document.getElementById("title").getAttribute("class"))
+
+    document.getElementById("title").setAttribute("class", "header set")
+    // setAttribute override the content of attribute that why we need to rewrite the already defined content again.
+    
+    const title = document.getElementById("title")
+    title.style.backgroundColor = "red"
+
+    const para = document.getElementById("para")
+    console.log(para.innerHTML)
+    console.log(para.textContent)
+    console.log(para.innerText)
+
+
+
+    // Class Selector:
+
+    const myHTMLcollection = document.getElementsByClassName("header")
+    console.log(myHTMLcollection)
+    myHTMLcollection[0].style.color = "blue"
+
+
+    // Important:
+
+    console.log(document.querySelector("h2"))
+    console.log(document.querySelector("#one"))
+    console.log(document.querySelector(".header-two"))
+
+    console.log(document.querySelector("input[type='password']"))
+
+    const myNodeList = document.querySelectorAll("li.item")
+    console.log(myNodeList)
+    myNodeList[2].style.color = "blue"
+
+
+
+    // Conversion of HTML collection and Node list into Array:
+    
+    console.log(Array.from(myHTMLcollection))
+    console.log(Array.from(myNodeList))
+
+
+</script>
+
+</html>
+
+
+
+<br>Try in Browser:<br>
+
+console.log(window)<br>
+console.log(window.document)<br>
+console.log(document)<br>
+console.dir(document)<br>
+
+<br>Note: HTML collections and Node list and array are differnt which came by documents methods.
