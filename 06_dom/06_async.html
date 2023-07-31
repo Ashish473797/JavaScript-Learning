@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about async</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #ffffffde;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <h1>About Async Functions:</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+</body>
+<script>
+
+    // setTimeout and clearTimeout
+    // function sayMyName(){
+    //     console.log("Ashish")
+    // }
+    // const nameAfter = setTimeout(sayMyName, 2000)
+    // document.querySelector("#stop").addEventListener("click", (event) => {
+    //     clearTimeout(nameAfter)
+    //     console.log("Stoped")
+    // })
+
+
+    // setInterval
+    const sayMyName = (str) => {
+        console.log(`${str} Ashish`)
+        console.log(Date.now())
+    }
+    document.querySelector("#start").addEventListener("click", (event) => {
+        const repeatName = setInterval(sayMyName, 2000, "hi")
+        document.querySelector("#stop").addEventListener("click", (event) => {
+            clearInterval(repeatName)
+        })
+    })
+
+</script>
+</html>
