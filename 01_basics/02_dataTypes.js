@@ -10,7 +10,7 @@ let married = false                 // boolean
 let speed;                          // undefine
 let value = Symbol('hello')         // symbol
 let empty = null                    // null
-let date = new Date("2022-03-25");  // date oject
+let date = new Date("2022-03-25");  // date object
 
 // Non primitive datatype are::
 
