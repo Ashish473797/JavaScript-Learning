@@ -150,5 +150,32 @@ function newGame() {
   });
 }
 
+```
+
+## project 6
+
+```javascript
+
+let randomColour = () => {
+  const hexRang = '0123456789abcdef';
+  let colour = '#';
+  for (let i = 0; i < 6; i++) {
+    colour += hexRang[parseInt(Math.random() * 16)];
+  }
+  return colour;
+};
+
+const changeColour = () => {
+  document.querySelector('body').style.backgroundColor = randomColour();
+};
+
+document.querySelector('#start').addEventListener('click', (event) => {
+  const colourInterval = setInterval(changeColour, 500);
+
+  document.querySelector('#stop').addEventListener('click', (event) => {
+    clearInterval(colourInterval);
+  });
+});
+
 
 ```
