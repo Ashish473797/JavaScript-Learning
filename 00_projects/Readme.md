@@ -152,6 +152,19 @@ function newGame() {
 
 ```
 
+## project 5
+
+```javascript
+
+const insert = document.querySelector('#insert');
+
+window.addEventListener('keydown', (event) => {
+  let key = event.key;
+  insert.innerHTML = `<h1>${key.toUpperCase()}</h1>`;
+});
+
+```
+
 ## project 6
 
 ```javascript
