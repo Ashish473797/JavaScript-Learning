@@ -15,8 +15,8 @@ let empty = null                    // null
 
 let student = { }                   // object
 let studentArr = []                 // array object
-let studentAction =  function(){}   // function object
 let date = new Date("2022-03-25");  // date object
+let studentAction =  function(){}   // function object
 
 
 console.table([typeof name, typeof age, typeof phoneNo, typeof married, typeof speed, typeof value, typeof empty, typeof student, typeof studentArr, typeof date, typeof studentAction])
