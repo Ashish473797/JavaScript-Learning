@@ -21,4 +21,4 @@ let studentAction =  function(){}   // function object
 
 console.table([typeof name, typeof age, typeof phoneNo, typeof married, typeof speed, typeof value, typeof empty, typeof student, typeof studentArr, typeof date, typeof studentAction])
 
-// Note:  primitive datatype take memory in Stack whereas Non-primitive datatype take memory in Head and referance stored in Stack.
+// Note:  primitive datatype take memory in Stack whereas Non-primitive datatype take memory in Heap and referance stored in Stack.
